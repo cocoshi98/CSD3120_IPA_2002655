@@ -7,13 +7,19 @@ const canvas = document.getElementById('renderCanvas') as HTMLCanvasElement;
 // ctx.font = '50px Arial';
 // ctx.fillText('Hello XR', 50, 50);
 
+// initialises the engine
 const engine = new Engine(canvas, true);
 
+// initialises the app
 const app = new App(engine, canvas);
+
+// creates a scene in the app
 const scenePromise = app.createScene();
 // engine.runRenderLoop(() => {
 //     scene.render();
 // })
+
+// runs the render loop to render the scene in the app
 scenePromise.then(scene => {
     engine.runRenderLoop(() => {
         scene.render();
