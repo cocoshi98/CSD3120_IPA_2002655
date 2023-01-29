@@ -15,4 +15,4 @@ To build and run the serve:
 
     Open your browser and go to http://localhost:3000/
 
-Video link:
+Video link: https://youtu.be/HLpexUN57e8
