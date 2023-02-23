@@ -25,3 +25,7 @@ scenePromise.then(scene => {
         scene.render();
     })
 })
+
+window.addEventListener('resize', () => {
+    engine.resize();
+})
