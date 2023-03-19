@@ -12,9 +12,9 @@
         "lib": [
             "dom",
             "es2015.promise",
-            "es5"
+            "es6"
         ],
-        "declaration": true,
+        //"declaration": true,
         "outDir": "./src",
         "types": [
             "babylonjs",

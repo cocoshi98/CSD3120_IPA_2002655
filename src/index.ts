@@ -14,7 +14,7 @@ const engine = new Engine(canvas, true);
 const app = new App(engine, canvas);
 
 // creates a scene in the app
-const scenePromise = app.createScene();
+const scenePromise = app.createXRScene('renderCanvas', {});
 // engine.runRenderLoop(() => {
 //     scene.render();
 // })
