@@ -180,7 +180,7 @@ export class App {
                 if (position.x < zoneMaximum.x && position.y < zoneMaximum.y && position.z < zoneMaximum.z &&
                     position.x > zoneMinimum.x && position.y > zoneMinimum.y && position.z > zoneMinimum.z) {
                     h2ModelsInBox.push(h2Model);
-                    console.log("h2 added");
+                    console.log(h2Model.mesh.name);
                 }
             }
 
@@ -189,14 +189,22 @@ export class App {
                 if (position.x < zoneMaximum.x && position.y < zoneMaximum.y && position.z < zoneMaximum.z &&
                     position.x > zoneMinimum.x && position.y > zoneMinimum.y && position.z > zoneMinimum.z) {
                     o2ModelsInBox.push(o2Model);
-                    console.log("o2 added");
+                    console.log(o2Model.mesh.name);
                 }
             }
 
             if (h2ModelsInBox.length === 2 && o2ModelsInBox.length === 1) {
-                H2Model.dispose();
-                H2Model2.dispose();
-                O2Model.dispose();
+                for (const h2Model of h2ModelsInBox) {
+                    h2Model.dispose();
+                }
+
+                for (const o2Model of o2ModelsInBox) {
+                    o2Model.dispose();
+                }
+
+                // H2Model.dispose();
+                // H2Model2.dispose();
+                // O2Model.dispose();
                 const H2OModel = new MyModel(scene, 'H2O.glb', MoleculeType.H2O, new Vector3(1.6, -0.55, -1.85), 0.1);
                 const H2OModel2 = new MyModel(scene, 'H2O.glb', MoleculeType.H2O, new Vector3(1.6, -0.55, -1.95), 0.1);
 
