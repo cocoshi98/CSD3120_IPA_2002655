@@ -24,3 +24,4 @@ both desktop and an additional form of locomotion interaction exist and works we
                                         
 ## Other feedback
 cant rotate nor pinch
+
